@@ -11,8 +11,15 @@ functions and the like.
 (let ((demo-files '("demo-kernel"
                     "demo-procedural-curve"
                     "demo-uv-mesh"
+                    "demo-superquadric"
+                    "demo-heightfield"
+                    "demo-particle"
+                    "demo-sweep-mesh"
                     "demo-animation"
-                    "demo")))
+                    "demo-isosurface"
+                    "demo-flex-animator"
+                    "demo-boid-system"
+                    "demo-misc")))
   (dolist (filename demo-files)
     (format t "Testing file ~a...~%" filename)
     (load (asdf:system-relative-pathname "kons-9" (strcat "test/" filename ".lisp"))))
